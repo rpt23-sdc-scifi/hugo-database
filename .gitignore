@@ -1,2 +1,5 @@
 node_modules/
-data/
+data/*
+
+# exception to the rule
+data/.gitkeep
