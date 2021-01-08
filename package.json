@@ -1,0 +1,16 @@
+{
+  "name": "database",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "generate-csv": "node generate-csv.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-write-stream": "^2.0.0",
+    "lorem-ipsum": "^2.0.3"
+  }
+}
