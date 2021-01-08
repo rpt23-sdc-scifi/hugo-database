@@ -5,20 +5,23 @@
 
 # Add comments to CSV files
 
+#This line changes to current working directory to where the seed.sh file is.
+cd "$(dirname "$0")"
+
 echo 'Generating CSV data files...';
 
-node /Users/hugo/hack-reactor/sdc/hugo-comments-service/seed/generate-csv.js
+node generate-csv.js
 
 echo 'Creating database and table schemas...'
 
-mysql -u root < /Users/hugo/hack-reactor/sdc/hugo-comments-service/seed/schema.sql
+mysql -u root < schema.sql
 
 echo 'Loading CSV data into tables...'
 
-mysql -u root < /Users/hugo/hack-reactor/sdc/hugo-comments-service/seed/load-data.sql
+mysql -u root < load-data.sql
 
 echo 'Creating indexes and foreign keys...'
 
-mysql -u root < /Users/hugo/hack-reactor/sdc/hugo-comments-service/seed/indexes.sql
+mysql -u root < indexes.sql
 
 echo 'Seed script FINISHED!'
